@@ -1,18 +1,9 @@
-
-  <div
-    [style.backgroundImage]="'url(' + logoUrl + ')'"
-    style="background-size: cover; background-position: center ; height: 40rem;"
-    (click)="onClick($event) ;">
-    <div>
-      <h2 style="font: bold;">{{ message }}</h2>
-
-  <!--  Input field with two-way binding using ngModel -->
-  <input type="text" [(ngModel)]="userName" placeholder="Enter your name">
-
-  <!-- Display user name dynamically -->
-  <h2>Hello {{ userName }} from BridgeLabz</h2>
-    </div>
-  </div>
-
-<!--  Add Router Outlet -->
+<div class="background-image">
+  <h1>Hello {{ userName }} from BridgeLabz</h1>
+  <img [src]="imgUrl" (click)="onClick($event)" alt="The BridgeLabz logo: a Bridge to Employment through a Lab Works." />
+</div>
+<div>
+  <input (input)="onInput($event)" [(ngModel)]="userName" />
+  <span class="error-output">{{ nameError }}</span>
+</div>
 <router-outlet></router-outlet>
