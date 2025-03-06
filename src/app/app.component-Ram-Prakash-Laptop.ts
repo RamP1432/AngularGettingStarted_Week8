@@ -1,22 +1,22 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms'; // ✅ Import FormsModule
+import { FormsModule } from '@angular/forms'; 
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [FormsModule, CommonModule, RouterOutlet], // ✅ Add FormsModule
+  imports: [FormsModule, CommonModule, RouterOutlet], 
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   title = 'HelloWorld';
   message: string = 'Welcome to BridgeLabz';
-  logoUrl: string = 'https://www.bridgelabz.com/assets/images/ET-CS-Coding-logo%20.png';
+  logoUrl: string = 'src/assets/Bridgelabz.png'; // ✅ Ensure the image is inside src/assets/
   url = "https://www.bridgelabz.com";
   
-  userName: string = ''; // ✅ Define userName for two-way binding
+  userName: string = ''; 
 
   ngOnInit(): void {
     this.title = "Hello from BridgeLabz.";
